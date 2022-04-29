@@ -17,6 +17,12 @@ struct DevicePage: View {
     _router = StateObject(wrappedValue: router)
     self.device = device
     self.endDate = Rinnai.determineEndTime(device)
+    
+    if (Date().timeIntervalSince(device.lastUpdated ?? Date()) > 120) {
+      Task {
+        _ = await updateDevices()
+      }
+    }
   }
   
   var body: some View {
