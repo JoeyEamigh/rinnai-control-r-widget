@@ -7,18 +7,122 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D4300E52281B887200CF3D36 /* widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = D4300E56281B887200CF3D36 /* widget.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
+		D4300E53281B887200CF3D36 /* widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = D4300E56281B887200CF3D36 /* widget.intentdefinition */; settings = {ATTRIBUTES = (private_codegen, ); }; };
+		D4300E54281B887200CF3D36 /* widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = D4300E56281B887200CF3D36 /* widget.intentdefinition */; settings = {ATTRIBUTES = (private_codegen, ); }; };
+		D447731F281078D8005DC7BB /* rinnai.swift in Sources */ = {isa = PBXBuildFile; fileRef = D447731E281078D8005DC7BB /* rinnai.swift */; };
+		D4488B1C2817476B003E8AEB /* rinnai.swift in Sources */ = {isa = PBXBuildFile; fileRef = D447731E281078D8005DC7BB /* rinnai.swift */; };
+		D4488B1E28174786003E8AEB /* persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B4F62A2810B50B00D8AB39 /* persistence.swift */; };
+		D4488B1F2817478C003E8AEB /* rC-r.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D4B4F6052810A62400D8AB39 /* rC-r.xcdatamodeld */; };
+		D4488B20281747A6003E8AEB /* keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46B7B47280F29D100D5C04F /* keychain.swift */; };
+		D4488B2628174B0D003E8AEB /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D4488B2528174B0D003E8AEB /* SwiftyJSON */; };
+		D4488B2928177789003E8AEB /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = D4488B2828177789003E8AEB /* SwiftDate */; };
+		D4488B2C281777A5003E8AEB /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = D4488B2B281777A5003E8AEB /* SwiftDate */; };
 		D46B7B1E280E540500D5C04F /* rinnai_control_r_widgetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46B7B1D280E540500D5C04F /* rinnai_control_r_widgetApp.swift */; };
-		D46B7B20280E540500D5C04F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46B7B1F280E540500D5C04F /* ContentView.swift */; };
+		D46B7B20280E540500D5C04F /* MotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46B7B1F280E540500D5C04F /* MotherView.swift */; };
 		D46B7B22280E540600D5C04F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D46B7B21280E540600D5C04F /* Assets.xcassets */; };
 		D46B7B25280E540600D5C04F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D46B7B24280E540600D5C04F /* Preview Assets.xcassets */; };
+		D46B7B32280E544E00D5C04F /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D46B7B31280E544E00D5C04F /* WidgetKit.framework */; };
+		D46B7B34280E544E00D5C04F /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D46B7B33280E544E00D5C04F /* SwiftUI.framework */; };
+		D46B7B37280E544E00D5C04F /* widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46B7B36280E544E00D5C04F /* widget.swift */; };
+		D46B7B40280E544E00D5C04F /* widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D46B7B2F280E544E00D5C04F /* widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D46B7B48280F29D100D5C04F /* keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46B7B47280F29D100D5C04F /* keychain.swift */; };
+		D4879056281A0AFF00C658C1 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D48790312819E38100C658C1 /* Intents.framework */; };
+		D4879059281A0AFF00C658C1 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4879058281A0AFF00C658C1 /* IntentHandler.swift */; };
+		D487905D281A0AFF00C658C1 /* rcr-intents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D4879055281A0AFF00C658C1 /* rcr-intents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D4879062281A0C9D00C658C1 /* persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B4F62A2810B50B00D8AB39 /* persistence.swift */; };
+		D4879063281A0CA100C658C1 /* rC-r.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D4B4F6052810A62400D8AB39 /* rC-r.xcdatamodeld */; };
+		D4879064281A0CA300C658C1 /* rinnai.swift in Sources */ = {isa = PBXBuildFile; fileRef = D447731E281078D8005DC7BB /* rinnai.swift */; };
+		D4879065281A0CA600C658C1 /* keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46B7B47280F29D100D5C04F /* keychain.swift */; };
+		D4879066281A0CA800C658C1 /* appgroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A8A2EF2819C641005E9926 /* appgroup.swift */; };
+		D4879067281A0CAA00C658C1 /* widgeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A8A2F22819C6F2005E9926 /* widgeter.swift */; };
+		D4879069281A0CC300C658C1 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D4879068281A0CC300C658C1 /* SwiftyJSON */; };
+		D487906B281A0CC300C658C1 /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = D487906A281A0CC300C658C1 /* SwiftDate */; };
+		D4A8A2F02819C641005E9926 /* appgroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A8A2EF2819C641005E9926 /* appgroup.swift */; };
+		D4A8A2F12819C641005E9926 /* appgroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A8A2EF2819C641005E9926 /* appgroup.swift */; };
+		D4A8A2F32819C6F2005E9926 /* widgeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A8A2F22819C6F2005E9926 /* widgeter.swift */; };
+		D4A8A2F42819C6F2005E9926 /* widgeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A8A2F22819C6F2005E9926 /* widgeter.swift */; };
+		D4B4F6072810A62400D8AB39 /* rC-r.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D4B4F6052810A62400D8AB39 /* rC-r.xcdatamodeld */; };
+		D4B4F60A2810B00700D8AB39 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D4B4F6092810B00700D8AB39 /* SwiftyJSON */; };
+		D4B4F62B2810B50B00D8AB39 /* persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B4F62A2810B50B00D8AB39 /* persistence.swift */; };
+		D4B4F62D2810BEC700D8AB39 /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B4F62C2810BEC700D8AB39 /* login.swift */; };
+		D4B4F6322811D0CD00D8AB39 /* devices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B4F6312811D0CD00D8AB39 /* devices.swift */; };
+		D4B4F6342811D62000D8AB39 /* devtools.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B4F6332811D62000D8AB39 /* devtools.swift */; };
+		D4B4F636281203B800D8AB39 /* local-notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B4F635281203B800D8AB39 /* local-notifications.swift */; };
+		D4B4F638281220D700D8AB39 /* device.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B4F637281220D700D8AB39 /* device.swift */; };
+		D4B60B66281231BB006B6F78 /* loaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B60B65281231BB006B6F78 /* loaders.swift */; };
+		D4D12A02281B78DD00924F87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D46B7B21280E540600D5C04F /* Assets.xcassets */; };
+		D4EC2D192816144A00FE19C8 /* info.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EC2D182816144A00FE19C8 /* info.swift */; };
+		D4FD168E2814BCCA00AF7606 /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = D4FD168D2814BCCA00AF7606 /* SwiftDate */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D46B7B3E280E544E00D5C04F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D46B7B12280E540500D5C04F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D46B7B2E280E544E00D5C04F;
+			remoteInfo = widgetExtension;
+		};
+		D487905B281A0AFF00C658C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D46B7B12280E540500D5C04F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4879054281A0AFF00C658C1;
+			remoteInfo = intents;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D46B7B44280E544E00D5C04F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D487905D281A0AFF00C658C1 /* rcr-intents.appex in Embed App Extensions */,
+				D46B7B40280E544E00D5C04F /* widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		D46B7B1A280E540500D5C04F /* rinnai-control-r-widget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rinnai-control-r-widget.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4300E55281B887200CF3D36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = Base; path = Base.lproj/widget.intentdefinition; sourceTree = "<group>"; };
+		D4300E58281B887500CF3D36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/widget.strings; sourceTree = "<group>"; };
+		D447731E281078D8005DC7BB /* rinnai.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rinnai.swift; sourceTree = "<group>"; };
+		D4488B2D281845FB003E8AEB /* iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "iOS-Info.plist"; sourceTree = "<group>"; };
+		D46B7B1A280E540500D5C04F /* rC-r Widget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rC-r Widget.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D46B7B1D280E540500D5C04F /* rinnai_control_r_widgetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rinnai_control_r_widgetApp.swift; sourceTree = "<group>"; };
-		D46B7B1F280E540500D5C04F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D46B7B1F280E540500D5C04F /* MotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherView.swift; sourceTree = "<group>"; };
 		D46B7B21280E540600D5C04F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D46B7B24280E540600D5C04F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D46B7B2F280E544E00D5C04F /* widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = widget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D46B7B31280E544E00D5C04F /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		D46B7B33280E544E00D5C04F /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		D46B7B36280E544E00D5C04F /* widget.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = widget.swift; sourceTree = "<group>"; tabWidth = 2; wrapsLines = 0; };
+		D46B7B3B280E544E00D5C04F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D46B7B45280E654600D5C04F /* widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = widget.entitlements; sourceTree = "<group>"; };
+		D46B7B46280E65AD00D5C04F /* iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOS.entitlements; sourceTree = "<group>"; };
+		D46B7B47280F29D100D5C04F /* keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keychain.swift; sourceTree = "<group>"; };
+		D48790312819E38100C658C1 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		D487903C2819E38100C658C1 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		D4879055281A0AFF00C658C1 /* rcr-intents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "rcr-intents.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4879058281A0AFF00C658C1 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		D487905A281A0AFF00C658C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4A8A2EF2819C641005E9926 /* appgroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appgroup.swift; sourceTree = "<group>"; };
+		D4A8A2F22819C6F2005E9926 /* widgeter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = widgeter.swift; sourceTree = "<group>"; };
+		D4B4F6062810A62400D8AB39 /* rC-r.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "rC-r.xcdatamodel"; sourceTree = "<group>"; };
+		D4B4F62A2810B50B00D8AB39 /* persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = persistence.swift; sourceTree = "<group>"; };
+		D4B4F62C2810BEC700D8AB39 /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
+		D4B4F6312811D0CD00D8AB39 /* devices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = devices.swift; sourceTree = "<group>"; };
+		D4B4F6332811D62000D8AB39 /* devtools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = devtools.swift; sourceTree = "<group>"; };
+		D4B4F635281203B800D8AB39 /* local-notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "local-notifications.swift"; sourceTree = "<group>"; };
+		D4B4F637281220D700D8AB39 /* device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = device.swift; sourceTree = "<group>"; };
+		D4B60B65281231BB006B6F78 /* loaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loaders.swift; sourceTree = "<group>"; };
+		D4DCC929281A0EB300BF9DB9 /* rcr-intents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "rcr-intents.entitlements"; sourceTree = "<group>"; };
+		D4EC2D182816144A00FE19C8 /* info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = info.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,16 +130,61 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4FD168E2814BCCA00AF7606 /* SwiftDate in Frameworks */,
+				D4B4F60A2810B00700D8AB39 /* SwiftyJSON in Frameworks */,
+				D4488B2928177789003E8AEB /* SwiftDate in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D46B7B2C280E544E00D5C04F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4488B2C281777A5003E8AEB /* SwiftDate in Frameworks */,
+				D4488B2628174B0D003E8AEB /* SwiftyJSON in Frameworks */,
+				D46B7B34280E544E00D5C04F /* SwiftUI.framework in Frameworks */,
+				D46B7B32280E544E00D5C04F /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4879052281A0AFF00C658C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4879069281A0CC300C658C1 /* SwiftyJSON in Frameworks */,
+				D4879056281A0AFF00C658C1 /* Intents.framework in Frameworks */,
+				D487906B281A0CC300C658C1 /* SwiftDate in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D4488B1D28174774003E8AEB /* shared */ = {
+			isa = PBXGroup;
+			children = (
+				D46B7B21280E540600D5C04F /* Assets.xcassets */,
+				D4B4F6052810A62400D8AB39 /* rC-r.xcdatamodeld */,
+				D4B4F62A2810B50B00D8AB39 /* persistence.swift */,
+				D447731E281078D8005DC7BB /* rinnai.swift */,
+				D46B7B47280F29D100D5C04F /* keychain.swift */,
+				D4A8A2EF2819C641005E9926 /* appgroup.swift */,
+				D4A8A2F22819C6F2005E9926 /* widgeter.swift */,
+			);
+			path = shared;
+			sourceTree = "<group>";
+		};
 		D46B7B11280E540500D5C04F = {
 			isa = PBXGroup;
 			children = (
+				D4488B2D281845FB003E8AEB /* iOS-Info.plist */,
+				D46B7B46280E65AD00D5C04F /* iOS.entitlements */,
+				D4DCC929281A0EB300BF9DB9 /* rcr-intents.entitlements */,
+				D4488B1D28174774003E8AEB /* shared */,
 				D46B7B1C280E540500D5C04F /* rinnai-control-r-widget */,
+				D46B7B35280E544E00D5C04F /* widget */,
+				D4879057281A0AFF00C658C1 /* intents */,
+				D46B7B30280E544E00D5C04F /* Frameworks */,
 				D46B7B1B280E540500D5C04F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,7 +192,9 @@
 		D46B7B1B280E540500D5C04F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D46B7B1A280E540500D5C04F /* rinnai-control-r-widget.app */,
+				D46B7B1A280E540500D5C04F /* rC-r Widget.app */,
+				D46B7B2F280E544E00D5C04F /* widget.appex */,
+				D4879055281A0AFF00C658C1 /* rcr-intents.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -52,9 +203,15 @@
 			isa = PBXGroup;
 			children = (
 				D46B7B1D280E540500D5C04F /* rinnai_control_r_widgetApp.swift */,
-				D46B7B1F280E540500D5C04F /* ContentView.swift */,
-				D46B7B21280E540600D5C04F /* Assets.xcassets */,
+				D4B4F6332811D62000D8AB39 /* devtools.swift */,
+				D4B4F635281203B800D8AB39 /* local-notifications.swift */,
+				D46B7B1F280E540500D5C04F /* MotherView.swift */,
+				D4B4F62C2810BEC700D8AB39 /* login.swift */,
+				D4B60B65281231BB006B6F78 /* loaders.swift */,
 				D46B7B23280E540600D5C04F /* Preview Content */,
+				D4B4F6312811D0CD00D8AB39 /* devices.swift */,
+				D4EC2D182816144A00FE19C8 /* info.swift */,
+				D4B4F637281220D700D8AB39 /* device.swift */,
 			);
 			path = "rinnai-control-r-widget";
 			sourceTree = "<group>";
@@ -67,25 +224,106 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		D46B7B30280E544E00D5C04F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D46B7B31280E544E00D5C04F /* WidgetKit.framework */,
+				D46B7B33280E544E00D5C04F /* SwiftUI.framework */,
+				D48790312819E38100C658C1 /* Intents.framework */,
+				D487903C2819E38100C658C1 /* IntentsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D46B7B35280E544E00D5C04F /* widget */ = {
+			isa = PBXGroup;
+			children = (
+				D46B7B45280E654600D5C04F /* widget.entitlements */,
+				D46B7B36280E544E00D5C04F /* widget.swift */,
+				D4300E56281B887200CF3D36 /* widget.intentdefinition */,
+				D46B7B3B280E544E00D5C04F /* Info.plist */,
+			);
+			path = widget;
+			sourceTree = "<group>";
+		};
+		D4879057281A0AFF00C658C1 /* intents */ = {
+			isa = PBXGroup;
+			children = (
+				D4879058281A0AFF00C658C1 /* IntentHandler.swift */,
+				D487905A281A0AFF00C658C1 /* Info.plist */,
+			);
+			path = intents;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D46B7B19280E540500D5C04F /* rinnai-control-r-widget */ = {
+		D46B7B19280E540500D5C04F /* iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D46B7B28280E540600D5C04F /* Build configuration list for PBXNativeTarget "rinnai-control-r-widget" */;
+			buildConfigurationList = D46B7B28280E540600D5C04F /* Build configuration list for PBXNativeTarget "iOS" */;
 			buildPhases = (
 				D46B7B16280E540500D5C04F /* Sources */,
 				D46B7B17280E540500D5C04F /* Frameworks */,
 				D46B7B18280E540500D5C04F /* Resources */,
+				D46B7B44280E544E00D5C04F /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D46B7B3F280E544E00D5C04F /* PBXTargetDependency */,
+				D487905C281A0AFF00C658C1 /* PBXTargetDependency */,
+			);
+			name = iOS;
+			packageProductDependencies = (
+				D4B4F6092810B00700D8AB39 /* SwiftyJSON */,
+				D4FD168D2814BCCA00AF7606 /* SwiftDate */,
+				D4488B2828177789003E8AEB /* SwiftDate */,
+			);
+			productName = "rinnai-control-r-widget";
+			productReference = D46B7B1A280E540500D5C04F /* rC-r Widget.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D46B7B2E280E544E00D5C04F /* widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D46B7B41280E544E00D5C04F /* Build configuration list for PBXNativeTarget "widget" */;
+			buildPhases = (
+				D46B7B2B280E544E00D5C04F /* Sources */,
+				D46B7B2C280E544E00D5C04F /* Frameworks */,
+				D46B7B2D280E544E00D5C04F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "rinnai-control-r-widget";
-			productName = "rinnai-control-r-widget";
-			productReference = D46B7B1A280E540500D5C04F /* rinnai-control-r-widget.app */;
-			productType = "com.apple.product-type.application";
+			name = widget;
+			packageProductDependencies = (
+				D4488B2528174B0D003E8AEB /* SwiftyJSON */,
+				D4488B2B281777A5003E8AEB /* SwiftDate */,
+			);
+			productName = widgetExtension;
+			productReference = D46B7B2F280E544E00D5C04F /* widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		D4879054281A0AFF00C658C1 /* rcr-intents */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D487905E281A0AFF00C658C1 /* Build configuration list for PBXNativeTarget "rcr-intents" */;
+			buildPhases = (
+				D4879051281A0AFF00C658C1 /* Sources */,
+				D4879052281A0AFF00C658C1 /* Frameworks */,
+				D4879053281A0AFF00C658C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "rcr-intents";
+			packageProductDependencies = (
+				D4879068281A0CC300C658C1 /* SwiftyJSON */,
+				D487906A281A0CC300C658C1 /* SwiftDate */,
+			);
+			productName = intents;
+			productReference = D4879055281A0AFF00C658C1 /* rcr-intents.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -100,6 +338,12 @@
 					D46B7B19280E540500D5C04F = {
 						CreatedOnToolsVersion = 13.3;
 					};
+					D46B7B2E280E544E00D5C04F = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					D4879054281A0AFF00C658C1 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
 				};
 			};
 			buildConfigurationList = D46B7B15280E540500D5C04F /* Build configuration list for PBXProject "rinnai-control-r-widget" */;
@@ -111,11 +355,20 @@
 				Base,
 			);
 			mainGroup = D46B7B11280E540500D5C04F;
+			packageReferences = (
+				D4B4F6082810B00700D8AB39 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				D4FD168C2814BCCA00AF7606 /* XCRemoteSwiftPackageReference "SwiftDate" */,
+				D4488B2428174B0D003E8AEB /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				D4488B2728177789003E8AEB /* XCRemoteSwiftPackageReference "SwiftDate" */,
+				D4488B2A281777A5003E8AEB /* XCRemoteSwiftPackageReference "SwiftDate" */,
+			);
 			productRefGroup = D46B7B1B280E540500D5C04F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D46B7B19280E540500D5C04F /* rinnai-control-r-widget */,
+				D46B7B19280E540500D5C04F /* iOS */,
+				D46B7B2E280E544E00D5C04F /* widget */,
+				D4879054281A0AFF00C658C1 /* rcr-intents */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +383,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D46B7B2D280E544E00D5C04F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4D12A02281B78DD00924F87 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4879053281A0AFF00C658C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -137,12 +405,81 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D46B7B20280E540500D5C04F /* ContentView.swift in Sources */,
+				D4300E52281B887200CF3D36 /* widget.intentdefinition in Sources */,
+				D46B7B48280F29D100D5C04F /* keychain.swift in Sources */,
+				D46B7B20280E540500D5C04F /* MotherView.swift in Sources */,
+				D4B60B66281231BB006B6F78 /* loaders.swift in Sources */,
+				D4A8A2F32819C6F2005E9926 /* widgeter.swift in Sources */,
+				D447731F281078D8005DC7BB /* rinnai.swift in Sources */,
+				D4B4F636281203B800D8AB39 /* local-notifications.swift in Sources */,
+				D4B4F6072810A62400D8AB39 /* rC-r.xcdatamodeld in Sources */,
+				D4A8A2F02819C641005E9926 /* appgroup.swift in Sources */,
+				D4B4F62B2810B50B00D8AB39 /* persistence.swift in Sources */,
+				D4B4F638281220D700D8AB39 /* device.swift in Sources */,
+				D4B4F6322811D0CD00D8AB39 /* devices.swift in Sources */,
+				D4B4F6342811D62000D8AB39 /* devtools.swift in Sources */,
+				D4EC2D192816144A00FE19C8 /* info.swift in Sources */,
 				D46B7B1E280E540500D5C04F /* rinnai_control_r_widgetApp.swift in Sources */,
+				D4B4F62D2810BEC700D8AB39 /* login.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D46B7B2B280E544E00D5C04F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4300E53281B887200CF3D36 /* widget.intentdefinition in Sources */,
+				D4488B20281747A6003E8AEB /* keychain.swift in Sources */,
+				D4488B1E28174786003E8AEB /* persistence.swift in Sources */,
+				D4488B1C2817476B003E8AEB /* rinnai.swift in Sources */,
+				D4A8A2F42819C6F2005E9926 /* widgeter.swift in Sources */,
+				D4488B1F2817478C003E8AEB /* rC-r.xcdatamodeld in Sources */,
+				D46B7B37280E544E00D5C04F /* widget.swift in Sources */,
+				D4A8A2F12819C641005E9926 /* appgroup.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4879051281A0AFF00C658C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4300E54281B887200CF3D36 /* widget.intentdefinition in Sources */,
+				D4879065281A0CA600C658C1 /* keychain.swift in Sources */,
+				D4879063281A0CA100C658C1 /* rC-r.xcdatamodeld in Sources */,
+				D4879062281A0C9D00C658C1 /* persistence.swift in Sources */,
+				D4879067281A0CAA00C658C1 /* widgeter.swift in Sources */,
+				D4879064281A0CA300C658C1 /* rinnai.swift in Sources */,
+				D4879059281A0AFF00C658C1 /* IntentHandler.swift in Sources */,
+				D4879066281A0CA800C658C1 /* appgroup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D46B7B3F280E544E00D5C04F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D46B7B2E280E544E00D5C04F /* widget */;
+			targetProxy = D46B7B3E280E544E00D5C04F /* PBXContainerItemProxy */;
+		};
+		D487905C281A0AFF00C658C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4879054281A0AFF00C658C1 /* rcr-intents */;
+			targetProxy = D487905B281A0AFF00C658C1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D4300E56281B887200CF3D36 /* widget.intentdefinition */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4300E55281B887200CF3D36 /* Base */,
+				D4300E58281B887500CF3D36 /* en */,
+			);
+			name = widget.intentdefinition;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D46B7B26280E540600D5C04F /* Debug */ = {
@@ -195,7 +532,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,7 +586,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -262,58 +599,182 @@
 		D46B7B29280E540600D5C04F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = iOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"rinnai-control-r-widget/Preview Content\"";
 				DEVELOPMENT_TEAM = 5TP53G9YLM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.joeyeamigh.rinnai-control-r-widget";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "rC-r Widget";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		D46B7B2A280E540600D5C04F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = iOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"rinnai-control-r-widget/Preview Content\"";
 				DEVELOPMENT_TEAM = 5TP53G9YLM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.joeyeamigh.rinnai-control-r-widget";
+				PRODUCT_NAME = "rC-r Widget";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		D46B7B42280E544E00D5C04F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = widget/widget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5TP53G9YLM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = widget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "rC-r Widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joeyeamigh.rinnai-control-r-widget.widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D46B7B43280E544E00D5C04F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = widget/widget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5TP53G9YLM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = widget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "rC-r Widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joeyeamigh.rinnai-control-r-widget.widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D487905F281A0AFF00C658C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "rcr-intents.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5TP53G9YLM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = intents/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = intents;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joeyeamigh.rinnai-control-r-widget.intents";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		D4879060281A0AFF00C658C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "rcr-intents.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5TP53G9YLM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = intents/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = intents;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joeyeamigh.rinnai-control-r-widget.intents";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -329,7 +790,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D46B7B28280E540600D5C04F /* Build configuration list for PBXNativeTarget "rinnai-control-r-widget" */ = {
+		D46B7B28280E540600D5C04F /* Build configuration list for PBXNativeTarget "iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D46B7B29280E540600D5C04F /* Debug */,
@@ -338,7 +799,119 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		D46B7B41280E544E00D5C04F /* Build configuration list for PBXNativeTarget "widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D46B7B42280E544E00D5C04F /* Debug */,
+				D46B7B43280E544E00D5C04F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D487905E281A0AFF00C658C1 /* Build configuration list for PBXNativeTarget "rcr-intents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D487905F281A0AFF00C658C1 /* Debug */,
+				D4879060281A0AFF00C658C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D4488B2428174B0D003E8AEB /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		D4488B2728177789003E8AEB /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/malcommac/SwiftDate";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		D4488B2A281777A5003E8AEB /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/malcommac/SwiftDate";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		D4B4F6082810B00700D8AB39 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		D4FD168C2814BCCA00AF7606 /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/malcommac/SwiftDate";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D4488B2528174B0D003E8AEB /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4B4F6082810B00700D8AB39 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		D4488B2828177789003E8AEB /* SwiftDate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4FD168C2814BCCA00AF7606 /* XCRemoteSwiftPackageReference "SwiftDate" */;
+			productName = SwiftDate;
+		};
+		D4488B2B281777A5003E8AEB /* SwiftDate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4FD168C2814BCCA00AF7606 /* XCRemoteSwiftPackageReference "SwiftDate" */;
+			productName = SwiftDate;
+		};
+		D4879068281A0CC300C658C1 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4B4F6082810B00700D8AB39 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		D487906A281A0CC300C658C1 /* SwiftDate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4FD168C2814BCCA00AF7606 /* XCRemoteSwiftPackageReference "SwiftDate" */;
+			productName = SwiftDate;
+		};
+		D4B4F6092810B00700D8AB39 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4B4F6082810B00700D8AB39 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		D4FD168D2814BCCA00AF7606 /* SwiftDate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4FD168C2814BCCA00AF7606 /* XCRemoteSwiftPackageReference "SwiftDate" */;
+			productName = SwiftDate;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		D4B4F6052810A62400D8AB39 /* rC-r.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D4B4F6062810A62400D8AB39 /* rC-r.xcdatamodel */,
+			);
+			currentVersion = D4B4F6062810A62400D8AB39 /* rC-r.xcdatamodel */;
+			path = "rC-r.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D46B7B12280E540500D5C04F /* Project object */;
 }

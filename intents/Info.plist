@@ -12,7 +12,7 @@
 			<array/>
 			<key>IntentsSupported</key>
 			<array>
-				<string>RinnaiWidgetIntent</string>
+				<string>RcRConfigurationIntent</string>
 			</array>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>

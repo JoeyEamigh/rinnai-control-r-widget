@@ -33,8 +33,10 @@ struct PersistenceController {
   }()
   
   init(inMemory: Bool = false) {
+    let storeURL = AppGroup.facts.containerURL.appendingPathComponent("World.sqlite")
+    let description = NSPersistentStoreDescription(url: storeURL)
     container = NSPersistentContainer(name: "rC-r")
-//    destroyPersistentStore(persistentStoreCoordinator: container.persistentStoreCoordinator)
+    container.persistentStoreDescriptions = [description]
     
     if inMemory {
       container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")

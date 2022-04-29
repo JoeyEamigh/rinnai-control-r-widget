@@ -8,14 +8,17 @@
 // based on https://github.com/explosivo22/rinnaicontrolr
 
 import Foundation
-import SwiftyJSON
 import CoreData
+import SwiftyJSON
+import SwiftDate
 
 final class Rinnai {
   private var username: String
   private var db = PersistenceController.i.container.viewContext
+  private var demoMode = false
   init(username: String) {
     self.username = username.lowercased();
+    if (self.username == "test@apple.com") { demoMode = true }
   }
   
   private func setShadow(_ device: Device, _ key: String, _ value: String) async throws -> Bool {
@@ -28,9 +31,9 @@ final class Rinnai {
     do {
       request.httpBody = "user=\(device.user!)&thing=\(device.thing!)&attribute=\(key)&value=\(value)".data(using: .utf8, allowLossyConversion: false)
       
-      let (data, status) = try await URLSession.shared.data(for: request)
-//      print(try! JSON(data: data))
-//      print(status)
+      let (_, status) = try await URLSession.shared.data(for: request)
+      //      print(try! JSON(data: data))
+      //      print(status)
       
       guard let httpResponse = status as? HTTPURLResponse else {
         print("No valid response")
@@ -49,6 +52,7 @@ final class Rinnai {
   }
   
   func setRecirculation(_ device: Device, _ duration: Double) async throws -> Bool {
+    if (demoMode) { return true }
     do {
       let _ = try await self.setShadow(device, "set_priority_status", "true")
       if (duration > 0.0) { let _ = try await self.setShadow(device, "recirculation_duration", String(Int(duration))) }
@@ -60,6 +64,7 @@ final class Rinnai {
   }
   
   func getDevices() async throws -> Bool {
+    if (demoMode) { dummyData(); return true }
     print("fetching devices")
     var request = URLRequest(url: URL(string: "https://s34ox7kri5dsvdr43bfgp6qh6i.appsync-api.us-east-1.amazonaws.com/graphql")!)
     request.httpMethod = "POST"
@@ -73,7 +78,7 @@ final class Rinnai {
     do {
       let (data, _) = try await session.data(for: request)
       let json = try JSON(data: data)
-//      print(json)
+      //      print(json)
       print("fetched data")
       if (json["data"]["getUserByEmail"]["items"].count < 1) {
         return false
@@ -108,6 +113,8 @@ final class Rinnai {
           dev.thing = device["thing_name"].stringValue
           
           try self.db.save()
+          
+          Widgeter.refresh()
           
           return true
         }}
@@ -164,12 +171,98 @@ final class Rinnai {
         fS.append(s)
       }
       
-//      print("fs: \(fS)")
+      //      print("fs: \(fS)")
       return fS
     } catch {
       print("error: \(error)")
       return []
     }
+  }
+  
+  private func dummyData() {
+    do {
+      var dev: Device
+      
+      let fetchRequest = Device.fetchRequest()
+      fetchRequest.predicate = NSPredicate(format: "id == %@", "1234")
+      let existing = try self.db.fetch(fetchRequest)
+      
+      if (!existing.isEmpty) {
+        dev = existing.first!
+      } else {
+        dev = Device(context: self.db)
+      }
+      
+      dev.lastUpdated = Date()
+      dev.id = "1234"
+      dev.name = "Apple Water Heater"
+      dev.rinnaiLastUpdated = Date()
+      dev.recirculating = false
+      dev.duration = 0.0
+      dev.timezone = "EST"
+      dev.user = "1234"
+      dev.thing = "1234"
+      
+      try! self.db.save()
+      Widgeter.refresh()
+    } catch {
+      print("error: \(error)")
+    }
+  }
+  
+  static func determineEndTime(_ device: Device) -> (scheduled: Bool, end: Date) {
+    if (!device.recirculating) { return (false, Date()) }
+    let rg = Region(calendar: Calendars.gregorian, zone: TimeZone(abbreviation: String((device.timezone ?? "EST").prefix(3)))!, locale: Locales.englishUnitedStates)
+    let cMinute = DateInRegion(Date(), region: rg).minute
+    let cHour = DateInRegion(Date(), region: rg).hour
+    let dW = DateInRegion(Date(), region: rg).weekday
+    
+    for s in (device.schedules?.allObjects ?? []) as! [Schedule]  {
+      if (cHour < s.startHour || cHour > s.endHour) { continue }
+      if (cHour == s.endHour && cMinute > s.endMinute) { continue }
+      if (!s.days!.contains(String(dW - 1))) { continue }
+
+      let endDate = Calendar.current.date(bySettingHour: Int(s.endHour), minute: Int(s.endMinute), second: 0, of: Date())!
+      return (true, endDate)
+    }
+    
+    let endDate = device.rinnaiLastUpdated!.addingTimeInterval(device.duration * 60)
+    return (false, endDate)
+  }
+  
+  static func isDuringSchedule(_ device: Device) -> Bool {
+    let rg = Region(calendar: Calendars.gregorian, zone: TimeZone(abbreviation: String((device.timezone ?? "EST").prefix(3)))!, locale: Locales.englishUnitedStates)
+    let cMinute = DateInRegion(Date(), region: rg).minute
+    let cHour = DateInRegion(Date(), region: rg).hour
+    let dW = DateInRegion(Date(), region: rg).weekday
+    
+    for s in (device.schedules?.allObjects ?? []) as! [Schedule]  {
+      if (cHour < s.startHour || cHour > s.endHour) { continue }
+      if (cHour == s.endHour && cMinute > s.endMinute) { continue }
+      if (!s.days!.contains(String(dW - 1))) { continue }
+
+      return true
+    }
+  
+    return false
+  }
+  
+  static func startAndEndTimes(_ device: Device) -> [Date] {
+    var dates: [Date] = []
+    
+    for s in (device.schedules?.allObjects ?? []) as! [Schedule]  {
+      let start = Calendar.current.date(bySettingHour: Int(s.startHour), minute: Int(s.startMinute), second: 0, of: Date())!
+      let end = Calendar.current.date(bySettingHour: Int(s.endHour), minute: Int(s.endMinute), second: 0, of: Date())!
+      
+      dates.append(start)
+      dates.append(end)
+    }
+    
+    return dates
+  }
+  
+  static func endTimeText(_ endDate: (scheduled: Bool, end: Date)) -> String {
+    return "\(endDate.end.in(region: .current).toFormat("h:mm a z"))"
   }
 }
 

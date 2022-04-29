@@ -10,33 +10,30 @@ import SwiftUI
 enum Page {
   case login
   case devices
-}
-
-// "mother view"
-struct MotherView: View {
-  @State var currentPage: Page = .login
-  @StateObject var viewRouter: ViewRouter
-  
-  init(viewRouter: ViewRouter) {
-    _viewRouter = StateObject(wrappedValue: viewRouter)
-    if (KeychainHelper.i.read(service: "email", account: "rinnai", type: String.self) != nil) {
-      print("email found")
-      currentPage = .devices
-    }
-  }
-  
-  
-  var body: some View {
-    switch currentPage {
-    case .login:
-      LoginPage()
-    case .devices:
-      ZStack {}
-    }
-  }
+  case devtools
 }
 
 class ViewRouter: ObservableObject {
   @Published var currentPage: Page = .login
+}
+
+struct MotherView: View {
+  @StateObject var router: ViewRouter
   
+  var body: some View {
+    switch router.currentPage {
+    case .login:
+      LoginPage(router: router)
+    case .devices:
+      DevicesPage(router: router)
+    case .devtools:
+      DevTools(router: router)
+    }
+#if DEBUG
+      EmptyView().onShake(perform: {
+        if (router.currentPage != .devtools) { router.currentPage = .devtools; return }
+        router.currentPage = .devices
+      })
+#endif
+  }
 }

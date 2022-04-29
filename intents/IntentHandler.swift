@@ -13,7 +13,6 @@ class IntentHandler: INExtension, RcRConfigurationIntentHandling {
       let db = PersistenceController.i.container.viewContext
       let fetchRequest = Device.fetchRequest()
       let devices = try db.fetch(fetchRequest)
-      print(devices)
       let options: [DeviceOption] = devices.map { device in
         return DeviceOption(identifier: device.id!, display: device.name!)
       }
@@ -23,7 +22,7 @@ class IntentHandler: INExtension, RcRConfigurationIntentHandling {
       return collection
     } catch {
       print("error: \(error)")
-      return INObjectCollection(items: [DeviceOption(identifier: "1234", display: "Login First")] as [DeviceOption])
+      return INObjectCollection(items: [] as [DeviceOption])
     }
   }
     

@@ -6,3 +6,10 @@
 //
 
 import Foundation
+import WidgetKit
+
+struct Widgeter {
+  static func refresh() {
+    WidgetCenter.shared.reloadTimelines(ofKind: "com.joeyeamigh.rinnai-control-r-widget.recirculating")
+  }
+}
